@@ -42,7 +42,7 @@ Config.Eye = "true" -- If you are using the QB Target then change this to true. 
         [1] = vector4(0 , 0 , 0, 0),
      },    
     ["cashregister"] = {
-         [1] = vector4(0 , 0 , 0, 0),
+         [1] = vector4(-1194.93, -893.3, 15.1, 217.23),
         [2] = vector4(0 , 0 , 0, 0),
          [3] = vector4(0 , 0 , 0, 0),
         [4] = vector4(0 , 0 , 0, 0),
