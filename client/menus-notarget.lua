@@ -84,7 +84,7 @@ Citizen.CreateThread(function()
                                 sleep = 5
                                 DrawText3D(v.x, v.y, v.z, "~g~E~w~ -  Make Drinks")
                                 if IsControlJustReleased(0, 38) then
-                                    TriggerEvent("nh-context:DrinkMenu")
+                                    TriggerEvent("qb-burgershot:DrinksMenu")
                                 end
                             elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                                 sleep = 5
@@ -101,7 +101,7 @@ Citizen.CreateThread(function()
                                 sleep = 5
                                 DrawText3D(v.x, v.y, v.z, "~g~E~w~ -  Open Fridge")
                                 if IsControlJustReleased(0, 38) then
-                                    TriggerEvent("nh-context:OrderMenu")
+                                    TriggerEvent("qb-burgershot:shop")
                                 end
                             elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                                 sleep = 5
@@ -135,7 +135,7 @@ Citizen.CreateThread(function()
                                 sleep = 5
                                 DrawText3D(v.x, v.y, v.z, "~g~E~w~ -  Make a Meal")
                                 if IsControlJustReleased(0, 38) then
-                                    TriggerEvent("nh-context:Burgers")
+                                    TriggerEvent("qb-burgershot:BurgerMenu")
                                 end
                             elseif #(pos - vector3(v.x, v.y, v.z)) < 2.5 then
                                 sleep = 5
@@ -233,154 +233,187 @@ end)
 
 -- NH - Context --
 
-RegisterNetEvent('nh-context:Burgers', function(data)
-    TriggerEvent('nh-context:sendMenu', {
+RegisterNetEvent('qb-burgershot:BurgerMenu', function(data)
+    exports['qb-menu']:openMenu({
         {
-            id = 0,
-            header = "| Available Burgers |",
-            txt = "",
+            header = "Burger Menu",
+            isMenuHeader = true, -- Set to true to make a nonclickable title
         },
+
         {
-            id = 1,
-            header = "• Moneyshot Burger",
+            header = "Moneyshot",
             txt = "Bun , Cooked Patty , Tomato , Lettuce",
             params = {
-                event = "qb-burgershot:MoneyShot"
+                event = "qb-burgershot:MoneyShot", 
+                args = {
+                    number = 1,
+                }
             }
         },
         {
-            id = 2,
-            header = "• Meat Free Burger",
+            header = "Meat Free Burger",
             txt = "Bun , Tomato , Lettuce",
             params = {
-                event = "qb-burgershot:MeatFree"
+                event = "qb-burgershot:MeatFree",
+                args = {
+                    number = 2,
+                }
             }
         },
+
         {
-            id = 3,
-            header = "• Bleeder Burger",
+            header = "Bleeder Burger",
             txt = "Bun , Cooked Patty , Tomato , Lettuce",
             params = {
-                event = "qb-burgershot:BleederBurger"
+                event = "qb-burgershot:BleederBurger",
+                args = {
+                    number = 3,
+                }
             }
         },
         {
-            id = 4,
-            header = "• The Heart Stopper",
+            header = "Heart Stopper",
             txt = "Bun , Cooked Patty , Tomato , Lettuce",
             params = {
-                event = "qb-burgershot:HeartStopper"
+                event = "qb-burgershot:HeartStopper",
+                args = {
+                    number = 4,
+                }
             }
         },
         {
-            id = 5,
-            header = "• Torpedo Roll",
-            txt = "Bun , Cooked Meat",
+            header = "Torpedo Roll",
+            txt = "Bun & Cooked Meat",
             params = {
-                event = "qb-burgershot:Torpedo"
+                event = "qb-burgershot:Torpedo",
+                args = {
+                    number = 5,
+                }
             }
         },
         {
-            id = 6,
-            header = "• Murder Meal",
+            header = "Murder Meal",
             txt = "The Heart Stopper, Fries and SoftDrink",
             params = {
-                event = "qb-burgershot:CreateMurderMeal"
+                event = "qb-burgershot:CreateMurderMeal",
+                args = {
+                    number = 6,
+                }
             }
-        },
-        {
-            id = 7,
-            header = "Close (ESC)",
-            txt = "",
         },
     })
 end)
 
+RegisterNetEvent('qb-burgershot:OrderMenu', function(data)
 
-RegisterNetEvent('nh-context:OrderMenu', function(data)
-    TriggerEvent('nh-context:sendMenu', {
-        {
-            id = 0,
-            header = "| Fridge |",
-            txt = "",
-        },
-        {
-            id = 1,
-            header = "• Order Items",
-            txt = "Order New Ingredients!",
-            params = {
-                event = "qb-burgershot:shop"
-            }
-        },
-        {
-            id = 2,
-            header = "• Open Fridge",
-            txt = "See what you have in storage",
-            params = {
-                event = "qb-burgershot:Storage2"
-            }
-        },
-        {
-            id = 3,
-            header = "Close (ESC)",
-            txt = "",
-        },
-    })
-end)
+    exports['qb-menu']:openMenu({
+       {
+           header = "Fridge",
+           isMenuHeader = true, -- Set to true to make a nonclickable title
+       },
 
-RegisterNetEvent('nh-context:DrinkMenu', function(data)
-    TriggerEvent('nh-context:sendMenu', {
-        {
-            id = 0,
-            header = "| Drink Menu |",
-            txt = "",
-        },
-        {
-            id = 1,
-            header = "• Soft Drink",
-            txt = "Soda Syrup",
-            params = {
-                event = "qb-burgershot:SoftDrink"
-            }
-        },
-        {
-            id = 2,
-            header = "• Milkshake",
-            txt = "Milkshake Formula",
-            params = {
-                event = "qb-burgershot:mShake"
-            }
-        },
-        {
-            id = 3,
-            header = "Close (ESC)",
-            txt = "",
-        },
-    })
-end)
+       {
+           header = "Purchase Ingredients",
+           txt = "Order Items",
+           params = {
+               event = "qb-burgershot:shop", 
+               args = {
+                   number = 0,
+               }
+           }
+       },
+       {
+           header = "Fridge",
+           txt = "Store items in the fridge",
+           params = {
+               event = "qb-burgershot:Storage2",
+               args = {
+                   number = 1,
+               }
+           }
+       },
+
+       {
+           header = "close",
+           txt = "",
+           params = {
+               event = "",
+               args = {
+                   number = 2,
+               }
+           }
+       },
+   })
+   end)
+
+   RegisterNetEvent('qb-burgershot:DrinksMenu', function(data)
+
+    exports['qb-menu']:openMenu({
+       {
+           header = "Drinks Menu",
+           isMenuHeader = true, -- Set to true to make a nonclickable title
+       },
+
+       {
+           header = "Soft Drink",
+           txt = "Soda Syrup",
+           params = {
+               event = "qb-burgershot:SoftDrink", 
+               args = {
+                   number = 0,
+               }
+           }
+       },
+       {
+           header = "Milkshake",
+           txt = "Milkshake Formula",
+           params = {
+               event = "qb-burgershot:mShake",
+               args = {
+                   number = 1,
+               }
+           }
+       },
+
+       {
+           header = "close",
+           txt = "",
+           params = {
+               event = "",
+               args = {
+                   number = 2,
+               }
+           }
+       },
+   })
+   end)
+
 
 
 -- Till Stuff --
-RegisterNetEvent("qb-burgershot:bill")
-AddEventHandler("qb-burgershot:bill", function()
-    local bill = exports["nh-keyboard"]:KeyboardInput({
-        header = "Create Receipt",
-        rows = {
+RegisterNetEvent("qb-burgershot:bill", function()
+    local bill = exports['qb-input']:ShowInput({
+        header = "Cash Register",
+        submitText = "Charge Customer",
+        inputs = {
             {
-                id = 0,
-                txt = "Server ID"
+                type = 'number',
+                name = 'id',
+                text = 'Magic Number',
+                isRequired = true
+
             },
             {
-                id = 1,
-                txt = "Amount"
+                type = 'number',
+                name = 'amount',
+                text = '$0.00',
+                isRequired = true
+
             }
         }
     })
-    if bill ~= nil then
-        if bill[1].input == nil or bill[2].input == nil then 
-            return 
-        end
-        TriggerServerEvent("qb-burgershot:bill:player", bill[1].input, bill[2].input)
+    if bill then
+        if not bill.id or not bill.amount then return end
+        TriggerServerEvent("qb-burgershot:bill:player", bill.id, bill.amount)
     end
 end)
-
