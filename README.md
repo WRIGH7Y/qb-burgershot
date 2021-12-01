@@ -3,8 +3,6 @@ This was not created by me, I have just updated it to QB-Menu and QB-Input. I pr
 
 Original Creator: [Github Link](https://github.com/Zach488/qb-burgershot)
 
-Also YOU NEED qb-target for this to work, I have removed the 3D floating text, It's messy  I might add an alternative option later but for now it is what it is.
-
 If YOU find any issues let me know and i will fix them asap. I tried to test/cover everything but you know how it be. UnknØwn#9219
 
 ## Preview
