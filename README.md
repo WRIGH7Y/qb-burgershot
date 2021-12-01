@@ -8,6 +8,8 @@ If YOU find any issues let me know and i will fix them asap. I tried to test/cov
 ## Preview
 I appologise for the bad quality i had two full screen clients open so yeah.
 
+-- Added an option for you to set true or false for the QB-target, If true you will use QB target If FALSE it will use 3D texts
+
 [watch preview here](https://streamable.com/3koyts)
 
 ## Requirements
@@ -17,7 +19,7 @@ PolyZone - [PolyZone GITHUB](https://github.com/mkafrin/PolyZone)
 
 qb-target - [QB Target github](https://github.com/BerkieBb/qb-target)
 
-GTA5MODs - [Burgershot MLO](https://www.gta5-mods.com/maps/gtaiv-burgershot-interior-sp-and-fivem)
+Map - [Burgershot MLO](https://github.com/lilphantom25/burgershot-map)
 
 ## All the information below is from the original creator.
 
