@@ -19,7 +19,7 @@ PolyZone - [PolyZone GITHUB](https://github.com/mkafrin/PolyZone)
 
 qb-target - [QB Target github](https://github.com/BerkieBb/qb-target)
 
-GTA5MODs - [Burgershot MLO](https://www.gta5-mods.com/maps/gtaiv-burgershot-interior-sp-and-fivem)
+Map - [Burgershot MLO](https://github.com/lilphantom25/burgershot-map)
 
 ## All the information below is from the original creator.
 
