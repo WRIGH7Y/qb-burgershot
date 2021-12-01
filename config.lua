@@ -6,51 +6,51 @@ Config.GaragePedLocations = {
 
 Config.SQL = 'oxmysql' --- oxmysql or ghmattisql
 
---if u are not using qb-target uncomment this.
+Config.Eye = "true" -- If you are using the QB Target then change this to true. IF FALSE it will show 3D text
 
--- Config.Locations = {
---     ["duty"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },    
---     ["tray1"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },
---     ["tray2"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },
---     ["tray3"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },  
---     ["pattycooker"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---         [2] = vector4(0 , 0 , 0, 0),
---     }, 
---     ["fryer"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     }, 
---     ["drinks"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---         [2] = vector4(0 , 0 , 0, 0),
---     },   
---     ["fridge"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },      
---     ["storage"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },
---     ["craftburger"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     },    
---     ["cashregister"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---         [2] = vector4(0 , 0 , 0, 0),
---         [3] = vector4(0 , 0 , 0, 0),
---         [4] = vector4(0 , 0 , 0, 0),
---     },   
---     ["garage"] = {
---         [1] = vector4(0 , 0 , 0, 0),
---     }, 
---  }
+ Config.Locations = { -- You will need to add your own locations I added duty and pattys for testing
+     ["duty"] = {
+         [1] = vector4(-1202.95, -895.45, 14.0, 167.74),
+     },    
+     ["tray1"] = {
+         [1] = vector4(0 , 0 , 0, 0),
+     },
+     ["tray2"] = {
+         [1] = vector4(0 , 0 , 0, 0),
+     },
+     ["tray3"] = {
+        [1] = vector4(0 , 0 , 0, 0),
+     },  
+     ["pattycooker"] = {
+         [1] = vector4(-1202.17, -897.07, 14.0, 125.44),
+         [2] = vector4(0 , 0 , 0, 0),
+     }, 
+    ["fryer"] = {
+         [1] = vector4(0 , 0 , 0, 0),
+     }, 
+    ["drinks"] = {
+        [1] = vector4(-1198.85, -895.33, 14.0, 125.72),
+        [2] = vector4(0 , 0 , 0, 0),
+     },   
+    ["fridge"] = {
+       [1] = vector4(0 , 0 , 0, 0),
+    },      
+    ["storage"] = {
+         [1] = vector4(0 , 0 , 0, 0),
+   },
+     ["craftburger"] = {
+        [1] = vector4(0 , 0 , 0, 0),
+     },    
+    ["cashregister"] = {
+         [1] = vector4(0 , 0 , 0, 0),
+        [2] = vector4(0 , 0 , 0, 0),
+         [3] = vector4(0 , 0 , 0, 0),
+        [4] = vector4(0 , 0 , 0, 0),
+     },   
+     ["garage"] = {
+         [1] = vector4(0 , 0 , 0, 0),
+     }, 
+}
 
 
 Config.Items = {
