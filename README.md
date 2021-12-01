@@ -8,7 +8,9 @@ If YOU find any issues let me know and i will fix them asap. I tried to test/cov
 ## Preview
 I appologise for the bad quality i had two full screen clients open so yeah.
 
--- Added an option for you to set true or false for the QB-target, If true you will use QB target If FALSE it will use 3D texts
+-- Added an option for you to set true or false for the QB-target
+-- Config.Eye = "true" Removes 3d text and uses the Eye
+-- Config.Eye = "false" Shows 3d text (YOU NEED TO ADD THESE IN CONFIG.LUA) replace 0,0,0,0
 
 [watch preview here](https://streamable.com/3koyts)
 
